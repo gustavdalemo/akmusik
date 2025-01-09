@@ -1,18 +1,24 @@
 <template>
     <div id="app">
+        <nav-bar/>
+        <router-view/>
         <h1>{{ message }}</h1>
         <p>AKmusik under uppbyggnad...</p>
     </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar.vue'
+
+
 export default {
     name: 'App',
     data() {
         return {
             message: 'Work in Progress'
         }
-    }
+    },
+    components: { NavBar }
 }
 </script>
 

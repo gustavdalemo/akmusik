@@ -1,52 +1,39 @@
 <template>
-    <nav class="navbar">
-        <ul class="navbar-list">
-            <li class="navbar-item">
-                <a href="/">
-                    <img src="@/assets/logo.svg" alt="Logo" class="navbar-logo">
-                </a>
-            </li>
-            <li class="navbar-item"><a href="/about">Om mig</a></li>
-            <li class="navbar-item"><a href="/info">Info/Priser</a></li>
-            <li class="navbar-item"><a href="/contact">Kontakt</a></li>
-        </ul>
-    </nav>
+  <b-navbar toggleable="lg" class="sticky-top">
+    <b-container fluid="sm">
+      <b-row>
+        <!-- Logo -->
+        <b-col>
+          <b-navbar-brand to="/">
+            <img src="@/assets/logo.svg" alt="logo" id="logo"/>
+          </b-navbar-brand>
+        </b-col>
+        <!-- Nav-collapse -->
+        <b-col cols="2" md="4" class="text-right">
+          <b-navbar-toggle target="nav-collapse" is-nav></b-navbar-toggle>
+          <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav class="ms-auto align-items-center">
+              <b-nav-item to="/">Hem</b-nav-item>
+              <b-nav-item to="/about">Om mig</b-nav-item>
+              <b-nav-item to="/info">Info/Priser</b-nav-item>
+              <b-nav-item to="/contact">Kontakt</b-nav-item>
+            </b-navbar-nav>
+          </b-collapse>
+        </b-col>
+      </b-row>
+    </b-container>
+  </b-navbar>
 </template>
 
 <script>
 export default {
-    name: 'NavBar'
-}
+  name: "NavBar",
+};
 </script>
 
 <style scoped>
-.navbar {
-    background-color: #333;
-    padding: 1rem;
-}
-
-.navbar-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-item a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-.navbar-item a:hover {
-    background-color: #555;
-}
-
-.navbar-logo {
-    width: 5rem;
-    height: 5rem;
-    background-color: white;
-    border-radius: 20%;
+#logo {
+  width: 100%;
+  max-width: 100px;
 }
 </style>

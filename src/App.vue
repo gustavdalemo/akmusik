@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <nav-bar />
+    <nav-bar :isDarkMode="isDarkMode" @toggle-theme="toggleTheme"/>
     <router-view />
     <h1>{{ message }}</h1>
-    <p>AKmusik under uppbyggnad...</p>
-    <button @click="toggleTheme">Toggle Theme</button>
   </div>
 </template>
 
@@ -15,7 +13,8 @@ export default {
   name: "App",
   data() {
     return {
-      message: "Work in Progress",
+      message: "",
+      isDarkMode: false
     };
   },
   components: { NavBar },
@@ -25,7 +24,13 @@ export default {
       const currentTheme = htmlElement.getAttribute("data-bs-theme");
       const newTheme = currentTheme === "dark" ? "light" : "dark";
       htmlElement.setAttribute("data-bs-theme", newTheme);
+      this.isDarkMode = newTheme === "dark";
+      console.log("isDarkMode", this.isDarkMode);
     },
+    // mounted() {
+    //   const currentTheme = document.documentElement.getAttribute("data-bs-theme");
+    //   this.isDarkMode = currentTheme === "dark";
+    // }
   },
 };
 </script>
@@ -38,12 +43,12 @@ export default {
 }
 #app {
   font-family: "outfit", sans-serif;
-  text-align: center;
+  text-align: center; 
 }
 
 h1 {
   font-size: 2em;
-  color: #4bc49c;
+  color: #19c78d;
 }
 
 p {
@@ -53,7 +58,8 @@ p {
 
 /* For debugging bootstrap grid */
 
-[class*="col"] {
-  border: 1px solid red;
-}
+/* [class*="col"] {
+  border: 1px solid black;
+} */
 </style>
+d

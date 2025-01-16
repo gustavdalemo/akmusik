@@ -1,12 +1,16 @@
 <template>
+<!-- TODO THE SIZE OF THE WINDOW IS: {{ x }} -->
   <b-container class="bv-example-row">
     <b-row>
-      <b-col> 1 of 3 </b-col>
-      <b-col> 2 of 3 </b-col>
-      <b-col> 3 of 3 </b-col>
+        <b-col>
+            <b-carousel ref="myCarousel" :interval="2500" controls indicators fade="carousel">
+                <b-carousel-slide img-src="./src/assets/piano1.jpg"></b-carousel-slide>
+                <b-carousel-slide img-src="./src/assets/piano2.jpg"></b-carousel-slide>
+                <b-carousel-slide img-src="./src/assets/piano3.jpg"></b-carousel-slide>
+            </b-carousel>
+        </b-col>
     </b-row>
   </b-container>
-  THE SIZE OF THE WINDOW IS: {{ x }}
 </template>
 
 <script lang="ts">
@@ -47,3 +51,14 @@ methods: {
 }
 };
 </script>
+
+<style scoped>
+h1 {
+    font-size: 2em;
+    color: #19c78d;
+}
+
+.img {
+    width: 50%
+}
+</style>

@@ -66,11 +66,6 @@ export default {
   text-align: center; 
 }
 
-h1 {
-  font-size: 2em;
-  color: #19c78d;
-}
-
 p {
   font-size: 1.5em;
   color: #555;

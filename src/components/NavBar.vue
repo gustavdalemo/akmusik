@@ -21,12 +21,12 @@
         <!-- Nav-offcanvas -->
         <b-col cols="8" class="d-lg-none text-end">
           <b-navbar-toggle target="nav-offcanvas" is-nav></b-navbar-toggle>
-          <b-offcanvas id="nav-offcanvas" title="OffCanvas" placement="end" is-nav auto-close="inside">
+          <b-offcanvas id="nav-offcanvas" title="Meny" placement="end" is-nav auto-close="inside">
             <b-navbar-nav class="ms-auto align-items-left">
-              <b-nav-item to="/">Hem</b-nav-item>
-              <b-nav-item to="/about">Om mig</b-nav-item>
-              <b-nav-item to="/info">Info/Priser</b-nav-item>
-              <b-nav-item to="/contact">Kontakt</b-nav-item>
+              <b-nav-item to="/"><i class="bi bi-house-fill"></i> Hem</b-nav-item>
+              <b-nav-item to="/about"><i class="bi bi-person-fill"></i> Om mig</b-nav-item>
+              <b-nav-item to="/info"><i class="bi bi-info-lg"></i> Info/Priser</b-nav-item>
+              <b-nav-item to="/contact"><i class="bi bi-envelope-fill"></i> Kontakt</b-nav-item>
             </b-navbar-nav>
             <toggle-theme-button :isDarkMode="isDarkMode" @toggle-theme="toggleTheme"></toggle-theme-button>
           </b-offcanvas>

@@ -39,7 +39,27 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --ptc: #ff8aef; /* Primary text color */
+  --ptc: #031120;
+  --sdc: #262b3b;
+
+  /* LightMode NavBar */
+  --navbar-lightMode: #fad2b1;
+  --lightModeL: #fdb072;
+  --lightModeR: #ffc291;
+  --navbar-lightMode-gradient:  linear-gradient(
+    to right,
+    var(--lightModeL) 0%,
+    var(--lightModeR) 100%
+  );
+    /* DarkMode NavBar */
+  --navbar-darkMode: #191c1f;
+  --darkModeL: #031120;
+  --darkModeR: #262b3b;
+  --navbar-darkMode-gradient: linear-gradient(
+    to right,
+    var(--darkModeL) 0%,
+    var(--darkModeR) 100%
+  );
 }
 #app {
   font-family: "outfit", sans-serif;
@@ -62,4 +82,3 @@ p {
   border: 1px solid black;
 } */
 </style>
-d
